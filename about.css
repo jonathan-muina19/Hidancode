@@ -1,0 +1,525 @@
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#8b0e00,#f66352);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg,#8b0e00,#f66352);
+    padding: 15px 30px;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Menu Toggle - Hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fbfafa;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+nav ul:hover a { 
+    filter: blur(3px);
+    opacity: 0.4;
+}
+
+nav ul a:hover {
+    transform: scale(1.5);
+    filter: blur(0);
+    opacity: 1;
+}
+
+/* Hero Section */
+.bg_content {
+    background-color: white;
+}
+
+.contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    padding: 20px;
+    gap: 40px;
+}
+
+.description {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.description h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description strong {
+    display: block;
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.description p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.image {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Social Media Links */
+.social_media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social_media a {
+    text-decoration: none;
+    background: linear-gradient(135deg,#8b0e00,#f66352);
+    color: white;
+    border-radius: 10px;
+    padding: 12px 25px;
+    transition: all ease 0.3s;
+    text-align: center;
+}
+
+.social_media a:hover {
+    box-shadow: inset 200px 0 0 orange;
+    color: #00a6ff;
+}
+
+/* Skills Section */
+#skil {
+    background: linear-gradient(135deg,#8b0e00,#f66352);
+    padding: 60px 20px;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.main img {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about { 
+    flex: 1;
+    min-width: 300px;
+}
+
+.about h1 {
+    color: #fbfafa;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.propos {
+    color: aliceblue;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+/* Skills Cards */
+#killd {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.bg_killd {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.kill h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.list_killd {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.list_killd div {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.list_killd div:hover {
+    transform: translateY(-10px);
+}
+
+.list_killd img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.list_killd h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.list_killd p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer_section {
+    background: linear-gradient(135deg,#8b0e00,#f66352);
+    color: white;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer_section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer_contact {
+    width: 100%;
+}
+
+.col-md-4-footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer_section h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact_link_box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact_link_box a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.contact_link_box a:hover {
+    opacity: 0.8;
+}
+
+p.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* MEDIA QUERIES */
+
+/* Tablette */
+@media (max-width: 1024px) {
+    .description h1 {
+        font-size: 2em;
+    }
+    
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about h1 {
+        justify-content: center;
+    }
+
+    .main img,
+    .about {
+        min-width: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        padding: 15px 20px;
+    }
+    
+    /* Menu Hamburger */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+    background: linear-gradient(135deg,#8b0e00,#f66352);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+    
+    nav ul li a {
+        font-size: 18px;
+    }
+    
+    /* Hero */
+    .contents {
+        flex-direction: column-reverse;
+        padding-top: 80px;
+        min-height: auto;
+    }
+    
+    .description {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .description h1 {
+        font-size: 1.8em;
+    }
+    
+    .social_media {
+        justify-content: center;
+    }
+    
+    .social_media a {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    /* Image */
+    .image {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    /* About Section */
+    #skil {
+        padding: 40px 20px;
+    }
+    
+    .main {
+        padding: 10px;
+        gap: 20px;
+    }
+    
+    .main img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .main img {
+        margin: 0 auto;
+    }
+    
+    .about h1 {
+        font-size: 1.5em;
+    }
+    
+    .propos {
+        font-size: 1em;
+    }
+    
+    /* Skills */
+    #killd {
+        padding: 40px 20px;
+    }
+    
+    .kill h2 {
+        font-size: 1.8em;
+    }
+    
+    .list_killd {
+        gap: 20px;
+    }
+    
+    .list_killd div {
+        min-width: 100%;
+    }
+    
+    /* Footer */
+    .footer_section {
+        padding: 30px 20px;
+    }
+    
+    .footer_section .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .col-md-4-footer-col {
+        width: 100%;
+    }
+    
+    p.footer {
+        margin: 20px 0 0 0;
+        padding: 20px 0 0 0;
+    }
+
+    .contact_link_box a {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Petit mobile */
+@media (max-width: 480px) {
+    .description h1 {
+        font-size: 1.5em;
+    }
+    
+    .description strong {
+        font-size: 1em;
+    }
+    
+    .social_media a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .list_killd img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .list_killd h3 {
+        font-size: 1.3em;
+    }
+}

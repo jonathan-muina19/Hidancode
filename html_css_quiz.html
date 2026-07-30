@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coder en ligne</title>
+  <link rel="stylesheet" href="html_css_quiz.css" /> 
+  <link rel="stylesheet" href="cour.css">
+  <link rel="stylesheet" href="code_life_like.css" />
+  <link rel="stylesheet" href="cours_html.css">
+  <link rel="stylesheet" href="code_life_quiz.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo">HC</div>
+        <div class="brand-text"> 
+          <div class="brand-name">HidanCode</div>
+          <div class="brand-tag">Apprenez. Pratiquez. Progressez.</div>
+        </div>
+      </div>
+
+      <div class="bg_header">
+            <div class="header">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="cour.html">Accueil</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="note.html">Notes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Quiz HTML &amp; CSS</h1>
+      <p>Répondez aux questions, puis cliquez sur <b>Voir les réponses</b>.</p>
+    </section>
+
+    <div class="toolbar">
+      <button id="toggle-answers" class="btn-primary" type="button">Voir les réponses</button>
+      <span id="answers-state" class="state">Corrections cachées</span>
+    </div>
+
+    <section class="builder">
+      <div class="builder-header">
+        <h2>Interface “Notions” (HTML &amp; CSS)</h2>
+        <p>Écrivez vos notions HTML/CSS et voyez le résultat en direct.</p>
+      </div>
+
+      <div class="builder-wrap">
+        <div class="builder-editors">
+          <div class="builder-panel">
+            <div class="builder-panel-title">HTML</div>
+            <textarea id="builder-html" class="builder-textarea" spellcheck="false"><h1 class="hello">Bonjour</h1>
+<p>Écrivez votre contenu ici…</p>
+<button class="btn">Mon bouton</button></textarea>
+          </div>
+
+          <div class="builder-panel">
+            <div class="builder-panel-title">CSS</div>
+            <textarea id="builder-css" class="builder-textarea" spellcheck="false">.hello {
+  color: #ffffff;
+}
+
+body {
+  background: #1e1e1e;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8b0e00, #f66352);
+  color: white;
+  cursor: pointer;
+}</textarea>
+          </div>
+        </div>
+
+        <div class="builder-preview">
+          <div class="builder-preview-title">
+            <span>Aperçu</span>
+            <button id="builder-reset" class="reset-inline" type="button">Réinitialiser</button>
+          </div>
+          <iframe id="builder-iframe" title="Aperçu Notions"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <section class="exercises">
+      <div class="exercises-header">
+        <h2>Exercices</h2>
+        <p>Faites les exercices et lisez les corrections en cliquant sur <b>Voir les réponses</b>.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card exercise-card" data-ex="1">
+          <h3>Exercice 1 (HTML)</h3>
+          <p>Crée une page HTML avec :</p>
+          <ul>
+            <li>un titre <code><h1></code></li>
+            <li>un paragraphe <code><p></code></li>
+            <li>un bouton <code><button></code></li>
+          </ul>
+          <div class="answer" hidden>
+            <h4>Correction (exemple)</h4>
+            <pre><code><h1>Bonjour</h1>
+<p>Bienvenue sur mon site.</p>
+<button>Clique-moi</button></code></pre>
+          </div>
+        </article>
+
+        <article class="card exercise-card" data-ex="1">
+          <h3>Exercice 2(HTML)</h3>
+          <p>Crée un tableau avec :</p>
+          <ul>
+            <li>deux colone <code><h1></code></li>
+            <li>trois lignes <code><p></code></li>
+          </ul>
+          <div class="answer" hidden>
+            <h4>Correction (exemple)</h4>
+            <pre><img src="Image/tableau.png" alt=""></pre>
+          </div>
+        </article>
+
+        <article class="card exercise-card" data-ex="1">
+          <h3>Exercice 3(HTML)</h3>
+          <p>Crée un menu déroulant cliquable :</p>
+          
+          <div class="answer" hidden>
+            <h4>Correction (exemple)</h4>
+            <pre><code><img src="Image/menu.png" alt=""></code></pre>
+          </div>
+        </article>
+
+        <article class="card exercise-card" data-ex="2">
+          <h3>Exercice 1 (CSS)</h3>
+          <p>Stylise ton paragraphe avec :</p>
+          <ul>
+            <li>une couleur bleue</li>
+            <li>une taille de police à 18px</li>
+            <li>un centrage horizontal</li>
+          </ul>
+          <div class="answer" hidden>
+            <h4>Correction (exemple)</h4>
+            <pre><code>p {
+  color: blue;
+  font-size: 18px;
+  text-align: center;
+}</code></pre>
+          </div>
+        </article>
+
+        <article class="card exercise-card" data-ex="3">
+          <h3>Exercice 2(CSS sélecteurs)</h3>
+          <p>Crée une classe <code>box</code> et donne-lui :</p>
+          <ul>
+            <li>un fond gris clair</li>
+            <li>un padding de 15px</li>
+            <li>un arrondi de 10px</li>
+          </ul>
+          <div class="answer" hidden>
+            <h4>Correction (exemple)</h4>
+            <pre><code>.box {
+  background: #eee;
+  padding: 15px;
+  border-radius: 10px;
+}</code></pre>
+          </div>
+        </article>
+
+        <article class="card exercise-card" data-ex="3">
+          <h3>Exercice 3(CSS)</h3>
+          <p>Crée une boutton et donne-lui :</p>
+          <ul>
+            <li>un fond gris blanc</li>
+            <li>un padding de 15px</li>
+            <li>un arrondi de 10px</li>
+          </ul>
+          <div class="answer" hidden>
+            <h4>Correction (exemple)</h4>
+            <pre><code>.box {
+  background: #ccc;
+  padding: 15px;
+  border-radius: 10px;
+}</code></pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer_section">
+    <div class="container">
+      <p class="footer">
+        &copy; <span id="displayYear"></span> Distribution par
+        <a href="https://themewagon.com/" target="_blank">Hidan Lenga</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    }
+
+    // Answers toggle
+    const toggleBtn = document.getElementById('toggle-answers');
+    const state = document.getElementById('answers-state');
+    const answerBlocks = document.querySelectorAll('.answer');
+
+    let shown = false;
+
+    function setShown(next) {
+      shown = next;
+      answerBlocks.forEach((el) => {
+        if (shown) el.removeAttribute('hidden');
+        else el.setAttribute('hidden', 'hidden');
+      });
+      toggleBtn.textContent = shown ? 'Masquer les réponses' : 'Voir les réponses';
+      state.textContent = shown ? 'Corrections affichées' : 'Corrections cachées';
+    }
+
+    toggleBtn.addEventListener('click', () => setShown(!shown));
+
+    // Builder (notions) preview
+    const htmlB = document.getElementById('builder-html');
+    const cssB = document.getElementById('builder-css');
+    const iframeB = document.getElementById('builder-iframe');
+    const resetB = document.getElementById('builder-reset');
+
+    const defaultHTML_B = htmlB ? htmlB.value : '';
+    const defaultCSS_B = cssB ? cssB.value : '';
+
+    function updateBuilder() {
+      if (!htmlB || !cssB || !iframeB) return;
+      const html = htmlB.value;
+      const css = cssB.value;
+
+      iframeB.srcdoc = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>${css}</style>
+</head>
+<body>
+  ${html}
+</body>
+</html>`;
+    }
+
+    if (htmlB && cssB) {
+      htmlB.addEventListener('input', updateBuilder);
+      cssB.addEventListener('input', updateBuilder);
+    }
+
+    if (resetB) {
+      resetB.addEventListener('click', () => {
+        if (!htmlB || !cssB) return;
+        htmlB.value = defaultHTML_B;
+        cssB.value = defaultCSS_B;
+        updateBuilder();
+      });
+    }
+
+    updateBuilder();
+
+    // Footer year
+    const y = document.getElementById('displayYear');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

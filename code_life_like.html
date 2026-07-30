@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coder en ligne</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="code_life_like.css" />
+  <link rel="stylesheet" href="code_life_quiz.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navbar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo">HC</div>
+        <div class="brand-text">
+          <div class="brand-name">HidanCode</div>
+          <div class="brand-tag">Apprenez. Pratiquez. Progressez.</div>
+        </div>
+      </div>
+
+      <nav class="topnav">
+        <a class="topnav-link" href="cour.html">Accueil</a>
+        <a class="topnav-link" href="about.html">About</a>
+        <a class="topnav-link" href="note.html">Note</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" aria-hidden="true">
+      <a class="mobile-link" href="cour.html">Accueil</a>
+      <a class="mobile-link" href="about.html">About</a>
+      <a class="mobile-link" href="note.html">Note</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <p class="hero-badge">Nouveau parcours • Débutant → Avancé</p>
+        <h1 class="hero-title">Apprenez le code comme un vrai développeur.</h1>
+        <p class="hero-subtitle">
+          Des leçons courtes, des exercices pratiques et une progression claire pour rester motivé.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#quiz">Commencer</a>
+          <a class="btn btn-outline-light btn-lg" href="#how">Comment ça marche</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">50+</div>
+            <div class="stat-label">Leçons</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">12</div>
+            <div class="stat-label">Projets</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">99%</div>
+            <div class="stat-label">Motivation</div>
+          </div>
+        </div>
+      </div>
+
+     
+  </section>
+
+  <!-- Catalog -->
+  <section id="catalog" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Catalogue des cours</h2>
+        <p class="section-desc">Choisis un parcours et avance étape par étape.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="course-card">
+            <div class="course-top">
+              <div class="course-badge">Débutant</div>
+              <div class="course-icon">💻</div>
+            </div>
+            <h3 class="course-title">HTML & CSS</h3>
+            <p class="course-text">Structure + styles modernes. Responsive et propre.</p>
+            <div class="course-meta">
+              <span>8 modules</span>
+              <span>✓ Exercices</span>
+            </div>
+            <a class="course-link" href="#">Voir le cours →</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="course-card">
+            <div class="course-top">
+              <div class="course-badge">Pratique</div>
+              <div class="course-icon">🧩</div>
+            </div>
+            <h3 class="course-title">Projets Web</h3>
+            <p class="course-text">Construis des pages complètes et apprends en faisant.</p>
+            <div class="course-meta">
+              <span>4 projets</span>
+              <span>✓ Feedback</span>
+            </div>
+            <a class="course-link" href="#">Voir les projets →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Comment ça marche</h2>
+        <p class="section-desc">Une méthode simple : apprendre → pratiquer → mesurer.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Choisis un cours</h3>
+            <p>Débutant ou premium : trouve ton niveau et ton objectif.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Fais les exercices</h3>
+            <p>Des tâches courtes pour progresser sans te perdre.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Suivi & progression</h3>
+            <p>Visualise ton avancement et garde la motivation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz (HTML & CSS) -->
+  <section id="quiz" class="section section-quiz">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Quiz HTML & CSS</h2>
+        <p class="section-desc">Passe à la question suivante uniquement si tu réponds correctement.</p>
+      </div>
+
+      <div class="quiz-shell">
+        <div class="quiz-sidebar">
+          <div class="quiz-step" data-step="0">
+            <div class="quiz-step-dot">1</div>
+            <div class="quiz-step-label">Q1</div>
+          </div>
+          <div class="quiz-step" data-step="1">
+            <div class="quiz-step-dot">2</div>
+            <div class="quiz-step-label">Q2</div>
+          </div>
+          <div class="quiz-step" data-step="2">
+            <div class="quiz-step-dot">3</div>
+            <div class="quiz-step-label">Q3</div>
+          </div>
+          <div class="quiz-step" data-step="3">
+            <div class="quiz-step-dot">4</div>
+            <div class="quiz-step-label">Q4</div>
+          </div>
+          <div class="quiz-step" data-step="4">
+            <div class="quiz-step-dot">5</div>
+            <div class="quiz-step-label">Q5</div>
+          </div>
+          <div class="quiz-step" data-step="5">
+            <div class="quiz-step-dot">6</div>
+            <div class="quiz-step-label">Q6</div>
+          </div>
+          <div class="quiz-step" data-step="6">
+            <div class="quiz-step-dot">7</div>
+            <div class="quiz-step-label">Q7</div>
+          </div>
+          <div class="quiz-step" data-step="7">
+            <div class="quiz-step-dot">8</div>
+            <div class="quiz-step-label">Q8</div>
+          </div>
+        </div>
+
+        <div class="quiz-main">
+          <div class="quiz-card">
+            <div class="quiz-card-top">
+              <div class="quiz-progress">Question <span id="qIndex">1</span>/8</div>
+              <button class="quiz-reset" type="button" id="quizReset">Recommencer</button>
+            </div>
+
+            <div class="quiz-question" id="quizQuestion"></div>
+
+            <div class="quiz-answers" id="quizAnswers"></div>
+
+            <div class="quiz-feedback" id="quizFeedback" role="status" aria-live="polite"></div>
+
+            <button class="quiz-next" type="button" id="quizNext" disabled>
+              Continuer →
+            </button>
+          </div>
+
+          <div class="quiz-hint" id="quizHint">
+            Astuce : utilise des balises HTML et des propriétés CSS correctes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer  
+   je  veux que pour le question l'utilisateur doit être obliger faire un choix et non qu'il doit choisir qu'une reponse non pas ça
+   -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">HidanCode</div>
+        <div class="footer-text">Mock de page inspirée (UI moderne).</div>
+      </div>
+      <div class="footer-links">
+        <a href="#catalog">Cours</a>
+        <a href="#progress">Progression</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    hamburger?.addEventListener('click', () => {
+      const opened = mobileNav.classList.toggle('open');
+      mobileNav.setAttribute('aria-hidden', opened ? 'false' : 'true');
+    });
+
+    // Close mobile nav on click (links)
+    document.querySelectorAll('.mobile-nav a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        mobileNav.setAttribute('aria-hidden', 'true');
+      });
+    });
+
+    // Quiz HTML & CSS (next only after correct answer)
+    const quizSteps = Array.from(document.querySelectorAll('.quiz-step[data-step]'));
+    const qIndexEl = document.getElementById('qIndex');
+    const quizQuestionEl = document.getElementById('quizQuestion');
+    const quizAnswersEl = document.getElementById('quizAnswers');
+    const quizFeedbackEl = document.getElementById('quizFeedback');
+    const quizNextBtn = document.getElementById('quizNext');
+    const quizResetBtn = document.getElementById('quizReset');
+
+    let quiz = {
+      total: 8,
+      items: [
+        {
+          question: 'Quel est le bon HTML pour créer un lien ? (a)',
+          answers: [
+            { text: '<a href="https://exemple.com">Voir</a>', correct: true },
+            { text: '<link href="https://exemple.com">Voir</link>', correct: false },
+            { text: '<button href="https://exemple.com">Voir</button>', correct: false },
+            { text: '<img src="https://exemple.com">Voir</img>', correct: false }
+          ]
+        },
+        {
+          question: 'En CSS, comment colorer le texte en rouge ? (color)',
+          answers: [
+            { text: 'text-color: red;', correct: false },
+            { text: 'color: red;', correct: true },
+            { text: 'font-color: red;', correct: false },
+            { text: 'background: red;', correct: false }
+          ]
+        },
+        {
+          question: 'Quelle balise HTML est utilisée pour définir un titre ? (h1-h6)',
+          answers: [
+            { text: '<header>Titre</header>', correct: false },
+            { text: '<title>Titre</title>', correct: false },
+            { text: '<h1>Titre</h1>', correct: true },
+            { text: '<p>Titre</p>', correct: false }
+          ]
+        },
+        {
+          question: "c'est quoi ? (HTML)",
+          answers: [
+            { text: 'Langage web', correct: false },
+            { text: 'Une propriéter', correct: false },
+            { text: 'HyperText Markup Langage', correct: true },
+            { text: 'Balise', correct: false }
+          ]
+        },
+        {
+          question: "c'est quoi une balise (<div></div>)",
+          answers: [
+            { text: 'Une secquence', correct: false },
+            { text: 'Un style', correct: false },
+            { text: 'HyperText Markup Langage', correct: false },
+            { text: 'Une block qui prend toute la largeur', correct: true }
+          ]
+        },
+        {
+          question: 'À sert (<"meta charset=UTF-8">) ?',
+          answers: [
+            { text: "Définit l'encodage pour afficher accents, emojis,etc", correct: true },
+            { text: 'controle la page', correct: false },
+            { text: 'À rien du tous', correct: false },
+            { text: "'Définit l'entête du page", correct: false }
+          ]
+        },
+         {
+          question: "Quel est la balise qui contient des liens de navigation principaux d'un site ?",
+          answers: [
+            { text: "<body>", correct: false },
+            { text: '<nav>', correct: true },
+            { text: '<p>', correct: false },
+            { text: "<strong>", correct: false }
+          ]
+        },
+         {
+          question: "Quel balise contient les métadonnées d'une page",
+          answers: [
+            { text: "<titel>", correct: false },
+            { text: "<input>", correct: false },
+            { text: "<head>", correct: true },
+            { text: "<style>", correct: false }
+          ]
+        }
+      ]
+    };
+
+    let step = 0;
+    let answeredCorrectly = false;
+
+    function setActiveStep(idx){
+      quizSteps.forEach(s => {
+        s.classList.toggle('active', Number(s.dataset.step) === idx);
+      });
+    }
+
+    function renderQuestion(){
+      const item = quiz.items[step];
+      qIndexEl.textContent = String(step + 1);
+      quizQuestionEl.textContent = item.question.trim();
+      quizAnswersEl.innerHTML = '';
+      quizFeedbackEl.textContent = '';
+      quizNextBtn.disabled = true;
+      answeredCorrectly = false;
+
+      // Les utilisateurs doivent choisir UNE réponse (les autres restent cliquables)
+      const answers = item.answers;
+      answers.forEach((a, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'answer-btn';
+        btn.textContent = a.text;
+        btn.dataset.idx = String(idx);
+
+        btn.addEventListener('click', () => {
+          // sélection visuelle
+          Array.from(quizAnswersEl.querySelectorAll('button.answer-btn')).forEach(b => {
+            b.classList.remove('selected', 'correct', 'wrong');
+          });
+          btn.classList.add('selected');
+
+          // calcul réponse
+          const correct = a.correct;
+          answeredCorrectly = correct;
+
+          // disable seulement quand la réponse est validée
+          Array.from(quizAnswersEl.querySelectorAll('button.answer-btn')).forEach(b => {
+            b.disabled = true;
+          });
+
+          if (correct){
+            btn.classList.add('correct');
+            quizFeedbackEl.textContent = '✅ Bonne réponse. Tu peux passer à la question suivante.';
+            quizNextBtn.disabled = false;
+          } else {
+            btn.classList.add('wrong');
+            quizFeedbackEl.textContent = '❌ Mauvaise réponse. Réessaie la question.';
+            // Pour forcer le choix : on empêche de continuer tant que ce n’est pas correct
+            quizNextBtn.disabled = true;
+            answeredCorrectly = false;
+          }
+        });
+
+        quizAnswersEl.appendChild(btn);
+      });
+
+      setActiveStep(step);
+    }
+
+    quizNextBtn.addEventListener('click', () => {
+      if (!answeredCorrectly) return;
+      step += 1;
+
+      if (step >= quiz.total){
+        quizQuestionEl.textContent = '🎉 Terminé ! Tu as réussi toutes les quiz HTML & CSS.';
+        quizAnswersEl.innerHTML = '';
+        quizNextBtn.disabled = true;
+        quizFeedbackEl.textContent = 'Bravo !';
+        quizSteps.forEach(s => s.classList.add('active'));
+        return;
+      }
+
+      renderQuestion();
+    });
+
+    quizResetBtn.addEventListener('click', () => {
+      step = 0;
+      quizSteps.forEach(s => s.classList.remove('active'));
+      renderQuestion();
+    });
+
+    renderQuestion();
+  </script>
+
+</body>
+</html>
+

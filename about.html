@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours en ligne</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="cours_html.css">
+    <link rel="stylesheet" href="cour.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="code_life_like.css" />
+    <link rel="stylesheet" href="code_life_quiz.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head> 
+<body>
+    <header class="topbar">
+    <div class="container topbar-inner"> 
+      <div class="brand">
+        <div class="logo">HC</div>
+        <div class="brand-text"> 
+          <div class="brand-name">HidanCode</div>
+          <div class="brand-tag">Apprenez. Pratiquez. Progressez.</div>
+        </div>
+      </div>
+
+      <div class="bg_header">
+            <div class="header">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="cour.html">Accueil</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="note.html">Notes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+  </header>
+
+    <section id="skil"> 
+        <div class="main">
+            <img src="Image/login.png" alt="ME">
+            <div class="about">
+                <h1 class="h1">Nos Propos</h1>
+                <p class="propos">
+                    Les site vas vous permettre de connaître le base de HTML &amp; CSS et ça aidera à faire des essayes
+                   , notre site consiste à vous faire apprendre de zéro 
+                    jusqu'a avoir un niveau ou vous serez à mesure de vous débrouiller.
+
+                    Dans la partie pratique, ça consiste a vous aidez à écrire du code et a voir les resultats et dans la partie théorie ça consiste
+                    a vous apprendre quelques notion qui va vous permettre de mieux comprendre le  HTML &amp; CSS 
+                </p>
+            </div>
+        </div>
+    </section>
+     <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4-footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contactez Nous
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Appel +243 999647296
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  moiselenga64@icloud.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="footer">
+          &copy; <span id="displayYear"></span> Distribution par
+          <a href="https://themewagon.com/" target="_blank">Hidan Lenga</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    }
+  </script>
+
+</body>
+</html>

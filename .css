@@ -1,0 +1,599 @@
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e8e8e8;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #8b0e00, #f66352);
+    padding: 15px 30px;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Menu Toggle - Hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fbfafa;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+nav ul:hover a {
+    filter: blur(3px);
+    opacity: 0.4;
+}
+
+nav ul a:hover {
+    transform: scale(1.5);
+    filter: blur(0);
+    opacity: 1;
+}
+
+/* Main Word Container */
+.word-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+
+/* Word Ribbon */
+.word-ribbon {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Ribbon Tabs */
+.ribbon-tabs {
+    display: flex;
+    background: linear-gradient(135deg, #8b0e00, #f66352);
+    padding: 0 10px;
+    gap: 2px;
+}
+
+.tab-btn {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+    border-radius: 3px 3px 0 0;
+    margin-top: 5px;
+}
+
+.tab-btn:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.tab-btn.active {
+    background: #f0f0f0;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Ribbon Panels */
+.ribbon-panel {
+    display: none;
+    padding: 10px 15px;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: 110px;
+}
+
+.ribbon-panel.active {
+    display: flex;
+}
+
+/* Ribbon Groups */
+.ribbon-group {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #d0d0d0;
+    padding-right: 15px;
+    min-height: 90px;
+}
+
+.ribbon-group:last-child {
+    border-right: none;
+}
+
+.group-title {
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+.group-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.button-row {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+/* Ribbon Buttons */
+.ribbon-group button {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #333;
+}
+
+.ribbon-group button:hover {
+    background: #f0f0f0;
+    border-color: #aaa;
+}
+
+.ribbon-group button:active {
+    background: #e0e0e0;
+}
+
+.ribbon-group button i {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Select Dropdowns */
+.ribbon-group select {
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background: white;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.ribbon-group select:focus {
+    outline: none;
+    border-color: #f66352;
+}
+
+/* Color Inputs */
+.color-row {
+    align-items: center;
+    gap: 5px;
+}
+
+.color-row input[type="color"] {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.color-row label {
+    cursor: pointer;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Document Wrapper */
+.document-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Document Page */
+.document-page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    padding: 25mm 20mm;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #333;
+    max-width: 100%;
+}
+
+.document-page:focus {
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Document Content Styles */
+.document-page h1 {
+    font-size: 24pt;
+    color: #333;
+    margin-bottom: 12pt;
+    margin-top: 12pt;
+    font-weight: bold;
+    page-break-after: avoid;
+}
+
+.document-page h2 {
+    font-size: 18pt;
+    color: #333;
+    margin-bottom: 10pt;
+    margin-top: 10pt;
+    font-weight: bold;
+    page-break-after: avoid;
+}
+
+.document-page h3 {
+    font-size: 14pt;
+    color: #333;
+    margin-bottom: 8pt;
+    margin-top: 8pt;
+    font-weight: bold;
+    page-break-after: avoid;
+}
+
+.document-page p {
+    margin-bottom: 8pt;
+    text-align: justify;
+}
+
+.document-page ul, .document-page ol {
+    margin-left: 20pt;
+    margin-bottom: 8pt;
+}
+
+.document-page li {
+    margin-bottom: 4pt;
+}
+
+.document-page blockquote {
+    border-left: 3px solid #ccc;
+    margin-left: 15pt;
+    padding-left: 15pt;
+    color: #666;
+    font-style: italic;
+}
+
+.document-page pre {
+    background: #f5f5f5;
+    padding: 10pt;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 10pt;
+    overflow-x: auto;
+}
+
+.document-page table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10pt 0;
+}
+
+.document-page td, .document-page th {
+    border: 1px solid #ccc;
+    padding: 6pt;
+    text-align: left;
+}
+
+.document-page img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10pt auto;
+}
+
+.document-page a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.document-page hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15pt 0;
+}
+
+/* Footer */
+.footer_section {
+    background: linear-gradient(135deg, #8b0e00, #f66352);
+    color: white;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer_section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.col-md-4-footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer_section h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact_link_box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact_link_box a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.contact_link_box a:hover {
+    opacity: 0.8;
+}
+
+p.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* MEDIA QUERIES */
+
+/* Tablette */
+@media (max-width: 1024px) {
+    .document-page {
+        width: 180mm;
+        min-height: 250mm;
+        padding: 20mm 15mm;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        padding: 15px 20px;
+    }
+    
+    /* Menu Hamburger */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: linear-gradient(135deg, #8b0e00, #f66352);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+    
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    /* Word Ribbon */
+    .ribbon-tabs {
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+    
+    .tab-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+        margin-top: 2px;
+    }
+
+    .ribbon-panel {
+        padding: 8px;
+        gap: 8px;
+        min-height: auto;
+    }
+
+    .ribbon-group {
+        border-right: none;
+        border-bottom: 1px solid #d0d0d0;
+        padding-right: 0;
+        padding-bottom: 8px;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .ribbon-group:last-child {
+        border-bottom: none;
+    }
+
+    .group-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* Document */
+    .document-wrapper {
+        padding: 15px 10px;
+    }
+
+    .document-page {
+        width: 100%;
+        min-height: auto;
+        padding: 15mm 10mm;
+        font-size: 11pt;
+    }
+
+    /* Footer */
+    .footer_section {
+        padding: 30px 20px;
+    }
+    
+    .footer_section .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .col-md-4-footer-col {
+        width: 100%;
+    }
+    
+    p.footer {
+        margin: 20px 0 0 0;
+        padding: 20px 0 0 0;
+    }
+}
+
+/* Petit mobile */
+@media (max-width: 480px) {
+    .document-page {
+        padding: 10mm 8mm;
+        font-size: 10pt;
+    }
+
+    .document-page h1 {
+        font-size: 18pt;
+    }
+
+    .document-page h2 {
+        font-size: 14pt;
+    }
+
+    .ribbon-group button {
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+
+    .ribbon-group select {
+        min-width: 100px;
+        font-size: 11px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .word-ribbon,
+    .footer_section,
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .document-wrapper {
+        padding: 0;
+        transform: none !important;
+    }
+
+    .document-page {
+        box-shadow: none;
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 0 !important;
+    }
+}
